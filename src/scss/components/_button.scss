@@ -1,0 +1,30 @@
+a.button {
+    text-decoration: none;
+    // border-bottom: #EA215A 0.125em solid;
+}
+
+button {
+    background: none;
+    border: none;
+}
+
+.button-type-1 {
+    padding:10px;
+    color : #383838;
+    font-weight: bold;
+    font-size: 12px;
+    white-space: nowrap;
+    background-color: #fff;
+    border-radius: 3px;
+    transition: 0.9ms;
+    &:hover {
+        color : #07c;
+    }
+}
+
+.white-link {
+    color : #fff;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+}

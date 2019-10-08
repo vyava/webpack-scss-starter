@@ -1,0 +1,9 @@
+/* Font Family Setup*/
+
+$main-font: 'Ubuntu', sans-serif;
+$main-font-size : 14px;
+
+body {
+    font-family : $main-font;
+    font-size : $main-font-size
+}

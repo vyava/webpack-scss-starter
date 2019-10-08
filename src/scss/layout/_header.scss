@@ -1,0 +1,64 @@
+header {
+    width: 1110px;
+    height: 110px;
+    margin: 0 auto;
+    padding-top : 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    
+
+    .Header-Top {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        .Logo-Link {
+            // background: red;
+            position: relative;
+
+            img {
+                width: 150px;
+            }
+        }
+
+        .User-Actions {
+            display: flex;
+            // background: blue;
+            margin-left: auto;
+            min-width: 450px;
+            min-height: 40px;
+            align-items: center;
+            justify-content: space-between;
+
+            .User-Actions-Region {
+                display: flex;
+                align-items: center;
+            }
+
+            .Language-Button {
+                background: none;
+                border: none;
+                font-size: 16px;
+                color: #fff;
+                cursor: pointer;
+                font-weight: bold;
+                color : #f1f1f1;
+                
+            }
+
+            .Country-Button {
+                margin-left : 20px;
+            }
+        }
+    }
+
+    .Header-Bottom {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+}
