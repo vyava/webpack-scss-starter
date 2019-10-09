@@ -1,8 +1,8 @@
 header {
-    width: 1110px;
+    max-width: 1110px;
     height: 110px;
     margin: 0 auto;
-    padding-top : 12px;
+    padding-top : 7px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -29,7 +29,7 @@ header {
             display: flex;
             // background: blue;
             margin-left: auto;
-            min-width: 450px;
+            // min-width: 460px;
             min-height: 40px;
             align-items: center;
             justify-content: space-between;
@@ -37,22 +37,38 @@ header {
             .User-Actions-Region {
                 display: flex;
                 align-items: center;
+
+                .Language-Button {
+                    background: none;
+                    border: none;
+                    font-size: 16px;
+                    color: #fff;
+                    cursor: pointer;
+                    font-weight: bold;
+                    color : #f1f1f1;
+                    
+                }
+    
+                .Country-Button {
+                    margin-left : 20px;
+                }
             }
 
-            .Language-Button {
-                background: none;
-                border: none;
-                font-size: 16px;
-                color: #fff;
-                cursor: pointer;
-                font-weight: bold;
-                color : #f1f1f1;
-                
+            .info {
+                margin-left : 13px;
             }
 
-            .Country-Button {
-                margin-left : 20px;
+            .User-Actions-Auth {
+                display: flex;
+                justify-content: space-between;
+                min-width: 165px;
+                .login {
+                    margin-right : 25px;
+                    margin-left: 15px;
+                }
             }
+
+            
         }
     }
 
