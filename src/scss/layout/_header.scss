@@ -1,80 +1,163 @@
+.header-wrapper {
+  background-color: #003580;
+}
+
 header {
-    max-width: 1110px;
-    height: 110px;
-    margin: 0 auto;
-    padding-top : 7px;
+  max-width: 1110px;
+  height: 109px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  .Header-Top {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    
+    width: 100%;
+    // padding-top : 7px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
 
-    .Header-Top {
+    .Logo-Link {
+      // background: red;
+      position: relative;
+      left: 7px;
+
+      @include mq("tablet"){
+          left: 0;
+      }
+
+      img {
+        width: 150px;
+      }
+    }
+
+    .User-Actions {
+      display: flex;
+      // background: blue;
+      margin-left: auto;
+      // min-width: 460px;
+      // min-height: 40px;
+      align-items: center;
+      justify-content: space-between;
+
+      .User-Actions-Region {
         display: flex;
-        width: 100%;
-        flex-direction: row;
         align-items: center;
+
+        .Language-Button {
+          background: none;
+          border: none;
+          font-size: 16px;
+          color: #fff;
+          cursor: pointer;
+          font-weight: bold;
+          color: #f1f1f1;
+        }
+
+        .Country-Button {
+          margin-left: 23px;
+
+          img {
+            width: 18px;
+          }
+        }
+      }
+
+      .add-property {
+        background-color: transparent;
+        border: 1px solid #fff;
+        color: #fff;
+        margin: 0 15px 0 28px;
+        display: none;
+        &:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+        @include mq("tablet") {
+            display: block;
+        }
+
+      }
+
+      .User-Actions-Auth {
+        display: flex;
         justify-content: space-between;
-
-        .Logo-Link {
-            // background: red;
-            position: relative;
-
-            img {
-                width: 150px;
-            }
+        min-width: 165px;
+        .login {
+          margin-right: 25px;
+          margin-left: 15px;
         }
-
-        .User-Actions {
-            display: flex;
-            // background: blue;
-            margin-left: auto;
-            // min-width: 460px;
-            min-height: 40px;
-            align-items: center;
-            justify-content: space-between;
-
-            .User-Actions-Region {
-                display: flex;
-                align-items: center;
-
-                .Language-Button {
-                    background: none;
-                    border: none;
-                    font-size: 16px;
-                    color: #fff;
-                    cursor: pointer;
-                    font-weight: bold;
-                    color : #f1f1f1;
-                    
-                }
-    
-                .Country-Button {
-                    margin-left : 20px;
-                }
-            }
-
-            .info {
-                margin-left : 13px;
-            }
-
-            .User-Actions-Auth {
-                display: flex;
-                justify-content: space-between;
-                min-width: 165px;
-                .login {
-                    margin-right : 25px;
-                    margin-left: 15px;
-                }
-            }
-
-            
-        }
+      }
     }
+  }
 
-    .Header-Bottom {
+  .Header-Bottom {
+    width: 100%;
+    margin-top: 9px;
+    // padding-top:13px;
+    // display: flex;
+    // align-items: center;
+    // flex-direction: column;
+    transition: all 0.2s ease-in-out;
+
+    nav {
+      ul {
+        list-style: none;
         display: flex;
-        align-items: center;
-        flex-direction: column;
+        flex-direction: row;
+        padding-left: 0;
+        margin: 0;
+
+        li {
+          margin-right: 28px;
+          color: #fff;
+
+          // &.selected {
+          //     border-bottom : 2px solid #fff;
+          // }
+
+          a {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 16px 8px 16px 4px;
+            text-decoration: none;
+            color: inherit;
+            // border-radius: 3px;
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 400;
+
+            &.selected {
+              border-bottom: 2px solid #fff;
+            }
+
+            span {
+              opacity: 0.8;
+            }
+
+            span.icon {
+              fill: #fff;
+              width: 24px;
+              height:24px;
+
+            }
+
+            span.text {
+              margin-left: 12px;
+            }
+
+            &:hover {
+              span {
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
     }
+  }
 }
